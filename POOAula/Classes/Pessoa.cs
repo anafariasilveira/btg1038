@@ -8,27 +8,62 @@ namespace Classes
 {
     public class Pessoa
     {
-        public string Nome;
-        public string Sobrenome;
-        public int Idade;
-        
-        //método construtor
+        public string Identificador { get; set; }
+        public string Nome { get; set; }
+        internal string Sobrenome { get; set; }
+        public int Idade { get; set; } = 1; //valor default caso nao informado
+        private List<Animal> Animais { get; set; } = new();
+        public DateTime DataNascimento { get; set; }
+
         public Pessoa()
         {
+            Identificador = Guid.NewGuid().ToString();
+            Animais = new();
         }
 
-        public Pessoa(string nome, string sobrenome)
+        // encapsulamento - através de um método
+        public void AdicionarAnimal(Animal animal)
         {
-            Nome = nome;
-            Sobrenome = sobrenome;
+            Animais.Add(animal);
         }
 
-        
-        public Pessoa(string nome, string sobrenome, int idade)
+        public bool FazerAniversario(string nome, string especie)
         {
-            Nome = nome;
-            Sobrenome = sobrenome;
-            Idade = idade;
+            //linq & lambda
+            //Animais.First() -- retorna exception quando não encontra
+            //Animais.FirstOrDefault() -- retorna null quando não encontra
+            Animal? animalAniversariante = Animais.FirstOrDefault(obj => obj.Nome == nome &&
+                                                                         obj.Especie == especie);
+            //foreach(Animal obj in Animais)
+            if (animalAniversariante == null)
+            {
+                return false;
+            }
+
+            animalAniversariante.Idade++;
+            return true;
+        }
+
+        public List<Animal> BuscarAnimaisPorEspecie(string especie)
+        {
+            //SELECT * FROM ANIMAIS WHERE ESPECIE = GATO
+            return Animais.Where(obj => obj.Especie == especie).ToList();
+        }
+
+        public void PossuiEspecie(string especie)
+        {
+            if (Animais.Any(x => x.Especie == especie))
+                Console.WriteLine($"Possui {especie}");
+            else
+                Console.WriteLine($"Não possui {especie}");
+        }
+
+        public void ImprimirAnimais()
+        {
+            Animais.ForEach(x =>
+            {
+                Console.WriteLine($"Animal {x.Nome} da espécie {x.Especie} possui {x.Idade} anos");
+            });
         }
     }
 }
