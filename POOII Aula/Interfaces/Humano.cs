@@ -8,6 +8,9 @@ namespace Interfaces
 {
     public class Humano : IReinoAnimale, IExercitar, IHumano//, IHumano com metodo pensar
     {
+        public string Nome { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Idade { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void Comer()
         {
             Console.WriteLine("Humano está comendo");

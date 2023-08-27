@@ -11,7 +11,7 @@ namespace Interfaces
         void Comer();
         void Movimentar();
         void Reproduzir();
-        void Respirar()
+        virtual void Respirar()
         {
             Console.WriteLine("Estou respirando");
         }
