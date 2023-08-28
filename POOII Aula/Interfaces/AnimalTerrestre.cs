@@ -8,6 +8,9 @@ namespace Interfaces
 {
     public class AnimalTerrestre : IReinoAnimale
     {
+        public string Nome { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Idade { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void Comer()
         {
             Console.WriteLine("Animal terrestre está comendo");

@@ -1,8 +1,15 @@
-﻿namespace Interfaces
+﻿using Interfaces.Exercicios;
+
+namespace Interfaces
 {
     internal class Program
     {
         static void Main(string[] args)
+        {
+            Humano teste = new Humano();
+            teste.Respirar();
+        }
+        /*static void Main(string[] args)
         {
             //os métodos são referentes a interface e não a classe
             //por isso eu só consigo invocar os métodos referentes a
@@ -53,7 +60,7 @@
                 FazerAlongamento -> Alongar membros inferiores
 
                 Crie uma classe teste
-             */
-        }
+             
+        }*/
     }
 }
