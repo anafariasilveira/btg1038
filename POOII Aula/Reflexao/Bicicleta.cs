@@ -13,7 +13,6 @@ namespace Reflexao
         public int TamanhoAro { get; set; }
         public int TamanhoQuadro { get; set; }
         public string TipoQuadro { get; set; }
-
         public Bicicleta(string modelo, int quantidadeMarchas, int tamanhoAro, int tamanhoQuadro, string tipoQuadro)
         {
             Modelo = modelo;
@@ -28,9 +27,9 @@ namespace Reflexao
 
         }
 
-        public void Freiar()
+        public void Freiar(string velocidade)
         {
-
+            Console.WriteLine($"Estou freiando {velocidade}");
         }
 
         public void Pedalar()
