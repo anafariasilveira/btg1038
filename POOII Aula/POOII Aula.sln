@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teste", "Teste\Teste.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{117DF7D6-064F-470B-AD59-C761CD66957C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflexao", "Reflexao\Reflexao.csproj", "{0BFA90A5-6CE9-4DC6-A50B-061D0BA09FAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflexao", "Reflexao\Reflexao.csproj", "{0BFA90A5-6CE9-4DC6-A50B-061D0BA09FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generico", "Generico\Generico.csproj", "{128457C3-BDB5-4D84-8AC1-4A6D7B5EEA5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0BFA90A5-6CE9-4DC6-A50B-061D0BA09FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BFA90A5-6CE9-4DC6-A50B-061D0BA09FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BFA90A5-6CE9-4DC6-A50B-061D0BA09FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128457C3-BDB5-4D84-8AC1-4A6D7B5EEA5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128457C3-BDB5-4D84-8AC1-4A6D7B5EEA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128457C3-BDB5-4D84-8AC1-4A6D7B5EEA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128457C3-BDB5-4D84-8AC1-4A6D7B5EEA5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
