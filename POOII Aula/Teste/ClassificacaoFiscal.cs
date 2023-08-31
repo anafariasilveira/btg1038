@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Teste
 {
-    internal class Teste
+    public enum ClassificacaoFiscal
     {
+        LucroPresumido = 100,
+        LucroReal,
+        MEI,
+        IMEI = 400
     }
 }

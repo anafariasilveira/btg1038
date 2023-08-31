@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Drawing;
+using System.Reflection;
 using System.Text;
 
 namespace Reflexao
@@ -82,6 +83,21 @@ namespace Reflexao
             // new Bicicleta("Terrestre", 21, 26, 21, "Corrida");
 
             ImprimeReflection(bikeEmExecucao);
+
+
+            string tipo1 = typeof(Bicicleta).Name;
+
+            string tipo2 = bikeEmExecucao.GetType().Name;
+
+
+
+            Type type1 = typeof(Bicicleta);
+
+            Type type2 = bikeEmExecucao.GetType();
+
+            string nameTipo1 = type1.Name;
+
+            string nameTipo2 = type2.Name;
         }
 
         public static void ImprimeReflection(object objeto)

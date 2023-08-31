@@ -4,47 +4,44 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-        }
-
-        public abstract class Funcionario
-        {
-            public abstract void getBonificacao();
-        }
-
-        public abstract class Secretaria
-        {
-
-        }
-
-        public class SecretariaAdministrativa : Secretaria
-        {
-
-        }
-
-        public class SecretariaAgencia : Secretaria
-        {
-        }
-
-        public class Presidente : Funcionario
-        {
-            public override void getBonificacao()
+            Empresa empresa = new()
             {
-                //..
-            }
-        }
+                Nome = "Ada",
+                Classificacao = ClassificacaoFiscal.LucroReal
+            };
 
-        public class Gerente : Funcionario
-        {
-            public override void getBonificacao()
+            empresa.ClassificacaoString = "LucroReal";
+
+            Empresa empresa2 = new();
+            empresa2.ClassificacaoString = "lucroreal";
+
+            if (empresa.Classificacao == ClassificacaoFiscal.IMEI)
             {
-                //..
+
             }
-        }
 
-        public class Diretor : Gerente
-        {
+            if (empresa.ClassificacaoString == ClassificacaoFiscal.IMEI.ToString())
+            {
 
+            }
+
+            if ((int)empresa.Classificacao == 100)
+            {
+
+            }
+
+            Console.WriteLine(empresa.Classificacao);
+            Console.WriteLine((int)empresa.Classificacao);
+
+            string valorAnalisado = "Ada";
+            string valorPossivel = "Teste";
+
+            switch (empresa.Classificacao)
+            {
+                case ClassificacaoFiscal.LucroReal:
+                    Console.WriteLine("Empresa é Lucro Real");
+                    break;
+            }
         }
     }
 }
