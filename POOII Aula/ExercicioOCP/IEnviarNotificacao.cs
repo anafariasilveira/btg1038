@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExercicioOCP
 {
-    internal interface IEnviarNotificacao
+    public interface IEnviarNotificacao 
     {
-        void EnviarMensagemCliente(CanalMensagem canal);
+        //public int Numero { get; set; }
+        void EnviarMensagemCliente(EnviarNotificacao canal)
+        {
+            canal.EnviarMensagemClienteWhatsApp();
+        }
+        //void EnviarMensagemCliente(EnviarNotificacao canal)
+        //{
+        //    canal.EnviarMensagemClienteWhatsApp();
+        //}
     }
 }
